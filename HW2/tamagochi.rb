@@ -12,7 +12,8 @@ def ex
 pet.health -= rand(20)
 pet.eat -= rand(20)
 pet.sleep -= rand(20)
-pet.play -= rand(20) 
+pet.play -= rand(20)
+ 
 end
 print "Введите название петомца: "
 name = gets.chomp().to_s
@@ -76,7 +77,10 @@ begin
         print "#{pet.name} играет!"
     	when ""
         print "Вы выбрали не делать ничего!"
-        Pet.ex
+        	pet.health -= rand(20)
+        	pet.eat -= rand(20)
+        	pet.sleep -= rand(20)
+        	pet.play -= rand(20)
     	else
       	puts "Вы ввели #{diya}, что-то не так!"
       	print "Попробуйте сновa! "
